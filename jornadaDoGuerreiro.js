@@ -78,6 +78,6 @@ if (ponto === 0) {
     );
 } else {
     console.log(
-        'Você o derrotou completamente, Goku. Majin Boo jamais poderá reviver',
+        'Você o derrotou completamente, Goku! Majin Boo jamais poderá reviver',
     );
 }
