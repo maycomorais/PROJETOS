@@ -1,16 +1,19 @@
 console.clear();
 const prompt = require('prompt-sync')();
+let repeat = "Sim"
+while (repeat.toLocaleLowerCase() == 'sim' ) {
+
 let jogo = ['pedra', 'papel', 'tesoura'];
-let player = ''
+let player = '';
 let computador = '';
 let escolha = false;
-let rodadas = +prompt('Digite a quantidade de rodadas: ')
-let contV = 0
-let contE = 0
-let contD = 0
+let rodadas = +prompt('Digite a quantidade de rodadas: ');
+let contV = 0;
+let contE = 0;
+let contD = 0;
 
 console.log('JOKENPO');
-
+console.log();
 for (i = 0; i < rodadas; i++) {
     while (escolha == false){
         player = prompt('Escolha "Pedra", "Papel" ou "Tesoura"]": ').toLowerCase();
@@ -30,6 +33,7 @@ for (i = 0; i < rodadas; i++) {
         contD++;
     } 
     escolha = false
+    
 }
 console.log();
 if(contV > contD) {
@@ -38,4 +42,7 @@ if(contV > contD) {
     console.log(`V = ${contV} E = ${contE} D = ${contD} | Você empatou!`);
 } else {
     console.log(`V = ${contV} | E = ${contE} | D = ${contD} | Você perdeu!`);
+}
+console.log();
+repeat = prompt('Deseja continuar? ');
 }
