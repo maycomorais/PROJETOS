@@ -496,10 +496,7 @@
     //DEFINIR SE IRÁ CONSERTAR ARMADURA
     let conserto = false;
     while (conserto == false){
-        console.log(`Consertar a Armadura:
-    1 - Sim
-    2 - Não
-    *NOTA: Caso escolha 'SIM', você gastará 30 min, caso escolha 'Não', você gastará 10 min.`.yellow.bold);
+        console.log(`Consertar a Armadura:\n1 - Sim\n2 - Não\n*NOTA: Caso escolha 'SIM', você gastará 30 min, caso escolha 'Não', você gastará 10 min.`.yellow.bold);
         //CASO SIM, DEFINIR SE IRÀ TREINAR
         let escolha = +prompt();
             console.log();
@@ -508,21 +505,16 @@
             console.log(`Farei o reparo de sua armadura, ${(player.toUpperCase())}. Enquanto eu recolho Oricalco para realizar o trabalho, o deixo sob os cuidados do meu assistente "Kiki". Ele poderá ajudá-lo também.`.yellow.bold);
             conserto = true
             console.log();
-            prompt(`Presione ENTER para continuar.`);
+            prompt(`Presione ENTER para continuar.`.yellow.bold);
             console.log();
-            console.log(`Kiki: "Hey, ${(player.toUpperCase())}, enquanto sua armadura conserta, gostaria de ajudá-lo a treinar algumas habilidades comigo. Você topa?"
-            1 - Sim
-            2 - Não
-            *NOTA: Se escolher 'SIM', você treinará 5 habilidades com Kiki: [ATAQUE], [DEFESA], [RESISTÊNCIA], [COSMOS] e [SÉTIMO SENTIDO]. Cada habilidade custará 5 minutos do seu tempo. Caso escolha "NÃO", você gastará 15 minutos`.yellow.bold);
+            console.log(`Kiki: "Hey, ${(player.toUpperCase())}, enquanto sua armadura conserta, gostaria de ajudá-lo a treinar algumas habilidades comigo. Você topa?"\n1 - Sim\n2 - Não\n*NOTA: Se escolher 'SIM', você treinará 5 habilidades com Kiki: [ATAQUE], [DEFESA], [RESISTÊNCIA], [COSMOS] e [SÉTIMO SENTIDO].\nCada habilidade custará 6 minutos do seu tempo. Caso escolha "NÃO", você gastará 15 minutos`.yellow.bold);
             console.log();
             let treino = +prompt();
             console.clear();
             console.log();
             if (treino == 1){
                 //AUMENTAR ATAQUE;
-                console.log(`Vamos treinar suas habilidades de Ataque.
-                1 - Sim
-                2 - Não`.yellow.bold);
+                console.log(`Vamos treinar suas habilidades de Ataque.\n1 - Sim\n2 - Não`.yellow.bold);
                 e1 = +prompt();
                 if (e1 == 1){
                 char.upSkillAtaque(10);
@@ -533,9 +525,7 @@
                 }
                 console.log();
                 //AUMENTAR DEFESA;
-                console.log(`Vamos treinar suas habilidades de Defesa.
-                1 - Sim
-                2 - Não`.yellow.bold);
+                console.log(`Vamos treinar suas habilidades de Defesa.\n1 - Sim\n2 - Não`.yellow.bold);
                 e2 = +prompt();
                 if (e2 == 1){
                 char.defesa = char.upSkillDef(10);
@@ -546,9 +536,7 @@
                 }
                 console.log();
                 //AUMETAR RESISTÊNCIA;
-                console.log(`Vamos aumentar sua Resistência, os inimigos a frente são muito poderosos.
-                1 - Sim
-                2 - Não`.yellow.bold);
+                console.log(`Vamos aumentar sua Resistência, os inimigos a frente são muito poderosos.\n1 - Sim\n2 - Não`.yellow.bold);
                 e3 = +prompt()
                 if (e3 == 1) {
                 char.upSkillRes(0.5);
@@ -559,9 +547,7 @@
                 }
                 console.log();
                 //AUMENTAR COSMOS;
-                console.log(`Vamos queimar seu Cosmos.
-                1 - Sim
-                2 - Não`.yellow.bold);
+                console.log(`Vamos queimar seu Cosmos.\n1 - Sim\n2 - Não`.yellow.bold);
                 e4 = +prompt();
                 if (e4 == 1) {
                 char.cosmos = char.upSkillCos(0.5);
@@ -572,9 +558,7 @@
                 }
                 console.log();
                 //AUMENTAR SÉTIMO SENTIDO;
-                console.log(`Você precisa despertar seu Sétimo Sentido. Concentre-se, você consegue.
-                1 - Sim
-                2 - Não`.yellow.bold);
+                console.log(`Você precisa despertar seu Sétimo Sentido. Concentre-se, você consegue.\n1 - Sim\n2 - Não`.yellow.bold);
                 e5 = +prompt();
                 if (e5 == 1){
                 char.setimosent = char.upSkillSet(0.5);
@@ -597,7 +581,7 @@
             console.log();
             break;
         } else {
-            console.log(`<<< OPÇÃO INVÁLIDA!!! DIGITE [1] PARA SIM E [2] PARA NÃO.`.red.bold);
+            console.log(`<<< OPÇÃO INVÁLIDA!!!\nDIGITE [1] PARA SIM E [2] PARA NÃO.`.red.bold);
             escolha = false
         }
     console.log(),
@@ -616,7 +600,7 @@
         console.log(`Seu Sétimo Sentido agora é: ${char.setimosent}`.grey.bold);
         console.log();
     } else {
-        console.log(`VOCÊ NÃO GANHOU NENHUM ACRÉSCIMO DE ATRIBUTO. UMA PENA, FARÁ FALTA NAS PRÓXIMAS BATALHAS.`.red.bold);
+        console.log(`VOCÊ NÃO GANHOU NENHUM ACRÉSCIMO DE ATRIBUTO. UMA PENA FARÁ FALTA NAS PRÓXIMAS BATALHAS.`.red.bold);
     }
     prompt('Pressione "ENTER" para continuar. '.yellow);
     console.log();
@@ -625,7 +609,7 @@
         console.log(`Tudo certo ${(player.toUpperCase())}, sua armadura está completamente restaurada. Você estará um pouco mais protegido, mas se você não queimar seu Cosmos ao máximo e despertar seu Sétimo Sentido, de nada adiantará esta proteção.`.yellow.bold);
     } else {
         console.log(`Mu: ${(player.toUpperCase())}, se apresse. A Casa de Touro é logo adiante. O próximo adversário é o Cavaleiro com maior força física entre todos, muito cuidado.
-
+        
         Que Athena te proteja!`.yellow.bold);
     }
     };
@@ -1071,22 +1055,17 @@
         console.log();
         if (prosseguir = 'blue') {
             while (r1 != 1 && r1 != 2){
-                console.log(`No Olimpo há um Deus do Vinho e das Festas. Qual o Seu nome?
-                1 - Dionísio
-                2 - Baco
-                R: `.yellow.bold);
+                console.log(`No Olimpo há um Deus do Vinho e das Festas. Qual o Seu nome?\n1 - Dionísio\n2 - Baco\n `.yellow.bold);
                 r1 = +prompt();
                 console.log();
                 if (r1 == 1) {
-                console.log(`VOCÊ TEVE SORTE DESTA VEZ!!
-                ANDE 12 PASSOS E DEPOIS DOBRE A DIREITA`.bold);
+                console.log(`VOCÊ TEVE SORTE DESTA VEZ!!\nANDE 12 PASSOS E DEPOIS DOBRE A DIREITA`.bold);
                 char.upSkillDef(10);
                 hora = avancahora(hora, 0.1);
                 console.log();
                 console.log();
                 } else if (r1 = 2) {
-                    console.log(`HIHIHI HEHE HAHAHAHA!! BACO É UM DEUS ROMANO!
-                    POR SUA INSOLÊNCIA TOME ISTO: EXPLOSÃO GALÁTICAAA!`.bold);
+                    console.log(`HIHIHI HEHE HAHAHAHA!! BACO É UM DEUS ROMANO!\nPOR SUA INSOLÊNCIA TOME ISTO: EXPLOSÃO GALÁTICAAA!`.bold);
                     char.diminuiVida(100);
                     hora = avancahora(hora, 0.3);
                 } else if (r1 != 1 && r1 != 2){
@@ -1095,19 +1074,14 @@
             }
             while (r2 != 1 && r2 != 2){
                 console.log();
-                console.log(`Quem é o responsável por fazer a travessia no mundo dos mortos?
-                1 - Aqueronte
-                2 - Caronte 
-                R: `.yellow.bold);
+                console.log(`Quem é o responsável por fazer a travessia no mundo dos mortos?\n1 - Aqueronte\n2 - Caronte\n `.yellow.bold);
                 r2 = +prompt();
                 if (r2 == 2) {
-                console.log(`VOCÊ TEVE SORTE DESTA VEZ!!
-                ANDE 9 PASSOS E DEPOIS DOBRE A ESQUERDA`.bold);
+                console.log(`VOCÊ TEVE SORTE DESTA VEZ!!\nANDE 9 PASSOS E DEPOIS DOBRE A ESQUERDA`.bold);
                 char.upSkillAtaque(10);
                 hora = avancahora(hora, 0.1)
                 } else if (r2 == 1){
-                console.log(`HIHIHI HEHE HAHAHAHA!! AQUERONTE É O RIO QUE OS MORTOS ATRAVESSAM!
-                POR SUA INSOLÊNCIA TOME ISTO: EXPLOSÃO GALÁTICAAA!`.bold);
+                console.log(`HIHIHI HEHE HAHAHAHA!! AQUERONTE É O RIO QUE OS MORTOS ATRAVESSAM!\nPOR SUA INSOLÊNCIA TOME ISTO: EXPLOSÃO GALÁTICAAA!`.bold);
                 char.diminuiVida(100);
                 hora = avancahora(hora, 0.3)
                 } else if (r2 != 1 && r2 != 2){
@@ -1116,19 +1090,14 @@
             }
             while (r3 != 1 && r3 != 2){
                 console.log();
-                console.log(`Quem foi o primeiro Deus Grego?
-                1 - Cronos
-                2 - Caos
-                R: `.yellow.bold);
+                console.log(`Quem foi o primeiro Titã, que deu origem a todos os Deuses Gregos?\n1 - Cronos\n2 - Caos\n `.yellow.bold);
                 r3 = +prompt();
                 if (r3 == 2) {
-                console.log(`VOCÊ TEVE SORTE DESTA VEZ!!
-                ANDE 4 PASSOS E DOBRE PARA A ESQUERDA, DEPOIS ANDE MAIS 5 PASSOS E DOBRE A DIREITA`.bold);
+                console.log(`VOCÊ TEVE SORTE DESTA VEZ!!\nANDE 4 PASSOS E DOBRE PARA A ESQUERDA, DEPOIS ANDE MAIS 5 PASSOS E DOBRE A DIREITA`.bold);
                 char.upSkillSet(0.5);
                 hora = avancahora(hora, 0.1);
                 } else if (r3 == 1){
-                console.log(`O PRIMEIRO DEUS GREGO FOI CAOS!!! DO CAOS ADVÉM TUDO!!!
-                POR SUA INSOLÊNCIA TOME ISTO: EXPLOSÃO GALÁTICAAA!`);
+                console.log(`O PRIMEIRO TITÃ FOI CAOS!!! DO CAOS ADVÉM TUDO!!!\nPOR SUA INSOLÊNCIA TOME ISTO: EXPLOSÃO GALÁTICAAA!`);
                 char.diminuiVida(100);
                 hora = avancahora(0.3);
                 } else if (r3 != 1 && r3 != 2){
@@ -1137,19 +1106,14 @@
             }
             while (r4 != 1 && r4 != 2){
                 console.log();
-                console.log(`Qual o nome da primeira esposa de Zeus?
-                1 - Métis
-                2 - Hera
-                R: `.yellow.bold);
+                console.log(`Qual o nome da primeira esposa de Zeus?\n1 - Métis\n2 - Hera\n `.yellow.bold);
                 r4 = +prompt();
                 if (r4 == 1) {
-                console.log(`VOCÊ TEVE SORTE DESTA VEZ!!
-                ANDE 11 PASSOS E DEPOIS DOBRE A DIREITA`.bold);
+                console.log(`VOCÊ TEVE SORTE DESTA VEZ!!\nANDE 11 PASSOS E DEPOIS DOBRE A DIREITA`.bold);
                 char.upSkillSet(0.5);
                 hora = avancahora(hora, 0.1)
                 } else if (r4 == 2){
-                console.log(`HIHIHI HEHE HAHAHAHA!! HERA, ALÉM DE SUA IRMÃ, TAMBÉM FOI SUA TERCEIRA ESPOSA!
-                POR SUA INSOLÊNCIA TOME ISTO: EXPLOSÃO GALÁTICAAA!`.bold);
+                console.log(`HIHIHI HEHE HAHAHAHA!! HERA, ALÉM DE SUA IRMÃ, TAMBÉM FOI SUA TERCEIRA ESPOSA!\nPOR SUA INSOLÊNCIA TOME ISTO: EXPLOSÃO GALÁTICAAA!`.bold);
                 char.diminuiVida(100);
                 hora = avancahora(hora, 0.3);
                 } else if (r4 != 1 && r4 != 2){
@@ -1158,19 +1122,14 @@
             }
             while (r5 != 1 && r5 != 2){
                 console.log();
-                console.log(`Quais destes NÃO foram um dos 12 trabalhos de Hércules?
-                1 - Cavalariças de Áugias
-                2 - Derrotar a Medusa
-                R: `.yellow.bold);
+                console.log(`Quais destes NÃO foram um dos 12 trabalhos de Hércules?\n1 - Cavalariças de Áugias\n2 - Derrotar a Medusa\n `.yellow.bold);
                 r5 = +prompt();
                 if (r5 == 2) {
-                console.log(`VOCÊ TEVE SORTE DESTA VEZ!!
-                ANDE 5 PASSOS E DOBRE A ESQUERDA, DEPOIS DOBRE A DIREITA NA PRIMEIRA SAÍDA.`.bold);
+                console.log(`VOCÊ TEVE SORTE DESTA VEZ!!\nANDE 5 PASSOS E DOBRE A ESQUERDA, DEPOIS DOBRE A DIREITA NA PRIMEIRA SAÍDA.`.bold);
                 char.upSkillVida(100);
                 hora = avancahora(hora, 0.1);
                 } else if (r5 == 1){
-                console.log(`HIHIHI HEHE HAHAHAHA!! AS CAVALARIÇAS DE ÁUGIAS FOI UM DOS TRABALHOS DE HÉRCULES!
-                POR SUA INSOLÊNCIA TOME ISTO: EXPLOSÃO GALÁTICAAA!`.bold);
+                console.log(`HIHIHI HEHE HAHAHAHA!! AS CAVALARIÇAS DE ÁUGIAS FOI UM DOS TRABALHOS DE HÉRCULES!\nPOR SUA INSOLÊNCIA TOME ISTO: EXPLOSÃO GALÁTICAAA!`.bold);
                 char.diminuiVida(100);
                 hora = avancahora(hora, 0.3)
                 } else if (r5 != 1 && r5 != 2){
@@ -1201,8 +1160,7 @@
         }
         console.log();
         if (ponto === 0) {
-        console.log(`Como esperado, você é um fracassado ${(player.toUpperCase())}.
-        MORRA AGORA!!!! OOOOOUTRA DIMENSÃÃÃÃOOOOO!!! `.yellow.bold);
+        console.log(`Como esperado, você é um fracassado ${(player.toUpperCase())}.\nMORRA AGORA!!!! OOOOOUTRA DIMENSÃÃÃÃOOOOO!!! `.yellow.bold);
         console.log();
         prompt(`Pressione ENTER`.red.bold);
         console.log(`
@@ -1245,8 +1203,7 @@
         console.log();
         break gameOver;
         } else if (ponto === 1 || ponto === 2) {
-        console.log(`Seu conhecimento ainda é raso, por isso você irá deixar este mundo hoje.
-        EXPLOSÃO GALÁTICA!!!!`.yellow.bold);
+        console.log(`Seu conhecimento ainda é raso, por isso você irá deixar este mundo hoje.\n\nEXPLOSÃO GALÁTICA!!!!`.yellow.bold);
         char.vida = 0
         console.log();
         prompt(`Pressione ENTER`.red.bold);
@@ -1737,19 +1694,65 @@ console.clear();
 console.log();
 console.log(`Que homem terrível foi Máscara da Morte. Espero que em sua pós-vida ele possa entender realmente o que significa ser Cavaleiro de Athena.
 
-O próximo adversário é Aiolos de Leão. Será bom ver um rosto amigo.
-
-
-`.blue.bold);
+O próximo adversário é Aiolos de Leão. Será bom ver um rosto amigo.`.blue.bold);
 console.log();
+prompt(`Pressione ENTER para continuar.`.yellow.bold);
+console.log(`
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⣽⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⡇⠀⠀⠀⠀⣀⡄⣢⣤⣶⣿⣷⣆⣀⡀⠀⢀⡄⢀⣄⠀⢸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣧⠀⠀⢠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣆⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣷⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣣⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢢⣭⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⣿⣿⣿⡜⠳⠋⠛⠛⠻⠋⠋⠫⣽⣿⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣿⣿⣦⡄⠀⢀⡄⠀⢠⣴⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠶⢿⣿⣿⣿⣿⣿⡃⠀⠀⠀⠀⣼⣿⣿⣿⣿⣤⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠷⣶⣿⣿⣿⣿⣿⣿⣇⡀⠙⠋⢀⣻⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠀⠀
+⠀⠀⣿⣿⣧⡂⠉⣉⣉⣉⡙⠛⠀⠂⠂⠀⠒⠀⠠⠄⢰⣿⣿⢿⣿⣿⣿⣿⣿⣶⣶⣿⣿⣿⣿⣿⣿⡇⡁⡀⠠⠄⠐⠂⠀⠀⠚⠋⠉⢙⣙⡉⠛⠃⠀⣼⣿⣿⠀⠀
+⠀⠀⢼⣿⣿⣿⣾⣿⣿⣾⣿⣶⣶⣦⣀⡀⠀⠀⠀⠀⠁⠉⢘⢿⣿⣿⣿⣯⠛⢿⣿⠟⣿⣿⣿⣿⡟⡏⠈⠀⠀⠀⠀⠀⢠⢄⣀⣶⣶⣿⣿⣿⣿⣶⣶⣿⣿⡇⠀⠀
+⠀⠀⠘⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣤⣤⣤⣄⣿⣿⣿⣿⣿⣿⣄⠀⠀⣰⣿⣿⣿⢿⣿⣷⣶⣭⣥⣵⣶⣶⣿⣿⣿⣿⣿⣿⠿⣿⣿⣿⣿⣿⣿⠃⠀⠀
+⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⢨⣿⣿⣿⣧⣿⠿⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣿⠃⠀⠀⠀
+⠀⠀⠀⠀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢻⣿⢅⢀⣀⠀⣀⠀⠈⠙⠿⣿⣶⣾⠿⠟⡉⠀⣀⡀⠀⣀⠀⣻⣿⡿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣷⣾⣿⣿⣷⣿⣿⣶⣿⣿⣿⣿⣷⣿⣶⣄⠈⢻⠃⠀⣠⣰⣿⣾⣿⣿⣿⣿⣾⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⡿⢿⣿⣿⣿⣿⣿⣿⣿⣟⢛⡿⣿⢿⣟⠛⠉⠛⠿⢿⣿⣷⡀⠬⣾⣿⡿⠿⠛⠈⠫⠿⣿⣿⢿⣟⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠀⠀⠀⠀⠀⠀⠀
 
+
+⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⢀⣀⣀⠀⠀⠀⠀⠀⣀⣀⠀⢀⣀⡀⠀⠀⠀⢀⣠⣤⣤⣤⣀⠀⠀⠀⠀⠀⣀⣤⣤⣤⣀⡀⠀⠀⠀⣠⣴⣶⣶⣦⣄⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣾⣿⣿⣆⠀⠀⠀⣾⣿⣿⣷⡀⠀⣠⣾⣿⣿⡇⣿⣿⣿⠀⢠⣾⣿⣿⣿⣿⣿⣿⣿⡆⠀⣴⣿⣿⣿⣿⣿⣿⣿⣦⡀⠸⣿⡿⠿⢿⣿⣿⡇⠀⠀⠀
+⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⡄⠀⠀⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⡇⣿⣿⣿⢀⣿⣿⣿⠋⠀⣀⣈⣉⣉⠀⣼⣿⣿⡟⠁⠀⠀⠹⣿⣿⣷⠀⠀⠀⣤⣾⣿⡿⠃⠀⠀⠀
+⠀⠀⠀⠀⣼⣿⣿⣇⣿⣿⣿⡄⠀⣿⣿⣿⡟⢿⣿⡿⢻⣿⣿⡇⣿⣿⣿⢸⣿⣿⣿⠀⠸⣿⣿⣿⣿⡇⣿⣿⣿⡀⠀⠀⠀⠀⣿⣿⣿⠀⠀⢸⣿⣿⡏⠀⠀⠀⠀⠀
+⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⡇⠀⠋⠀⢸⣿⣿⡇⣿⣿⣿⠀⢿⣿⣿⣦⣄⣈⣽⣿⣿⡇⠹⣿⣿⣷⣄⣀⣠⣼⣿⣿⡟⠀⠀⢀⣤⣤⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⢿⣿⡿⠉⠉⠉⠹⣿⣿⠇⢻⣿⣿⠇⠀⠀⠀⢸⣿⣿⠇⢿⣿⣿⠀⠀⠛⢿⣿⣿⣿⣿⣿⡿⠃⠀⠙⠿⣿⣿⣿⣿⣿⠿⠋⠀⠀⠀⠸⣿⣿⠇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠈⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+`.red.bold)
+console.log();
+prompt(`Pressione ENTER para continuar.`.yellow.bold);
+console.clear();
+console.log();
+function ataqueLeo(){
+    let ataqueL = (aioliaLeao.ataque * aioliaLeao.cosmos) * (Math.random() * aioliaLeao.setimosent);
+    let danoL = ataqueL - [(char.defesa * char.resistencia) * (Math.random() * char.setimosent)];
+    return danoL;
+}
+function ataqueCh(){
+    let ataqueCha = (char.ataque * char.cosmos) * Math.random(char.setimosent);
+    let danoCha = ataqueCha - [(aioliaLeao.defesa * aioliaLeao.resistencia) * (Math.random() * aioliaLeao.setimosent)];
+    return danoCha;
+}
+
+char.diminuiVida(ataqueLeo())
+aioliaLeao.diminuiVida(ataqueCh())
+console.log(`O dano de Aiolia foi ${Math.round(ataqueLeo())}. A vida de ${player} é de: ${Math.round(char.vida)}`.red.bold);
+console.log(`O dano de ${player} foi de ${Math.round(ataqueCh())} A vida de Aiolia de Leão é de: ${Math.round(aioliaLeao.vida)}`.red.bold);
 // 
 // console.log('Seu ataque foi de : ' +  Math.round(ataque2));
 // 
 // 
 // defesaChar = (char.defesa * char.resistencia) * (Math.random() * char.setimosent);
 console.log();
-console.log(`Restam ${(hora.toFixed(1))} horas.`.red.bold);
+console.log(`Restam ${(hora.toFixed(1))} horas para o Relógio do Zodíaco apagar.`.red.bold);
 
 }  // FIM DA LABEL PARA BRECAR O JOGO (IF VIDA <= 0 || IF HORA <= 0) ; 
 
